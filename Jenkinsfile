@@ -13,7 +13,7 @@ pipeline{
             steps{
                 sh 'printenv'
                 sh 'git version'
-                sh 'docker build . -t christyluv82/image-app1.1'
+                sh 'docker build . -t christyluv82/image-app1.2'
             }
         }
         stage("push image to DockerHub"){
@@ -22,7 +22,7 @@ pipeline{
                     withCredentials([string(credentialsId: 'dockerID', variable: 'dockerID')]) {
                         sh 'docker login -u christyluv82 -p ${dockerID}'
                     }
-                    sh 'docker push christyluv82/image-app1.1:latest'
+                    sh 'docker push christyluv82/image-app1.2:latest'
                 }
             }
         }
