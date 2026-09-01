@@ -1,0 +1,20 @@
+pipeline{
+    agent any
+    stages{
+        stage("HR department"){
+            steps{
+                sh 'echo "Welcome to HR department"'
+            }
+        }
+            stage("Technical department"){
+            steps{
+                sh 'echo "Welcome to Technical department"'
+            }
+        }
+         stage("accounts department"){
+            steps{
+                sh 'echo "Welcome to accounts department"'
+            }
+        }
+    }
+}
