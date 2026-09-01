@@ -5,7 +5,7 @@ pipeline{
         stage("GitHub checkout....") {
             steps {
                 script {
-                    git branch: 'main', url: 'https://github.com/Christabel-dev530/python-flask.git'
+                    git branch: 'main', url: 'https://github.com/Christabel-dev530/Jenkins-python-flask.git'
                 }
             }
         }
